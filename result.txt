@@ -1,0 +1,20 @@
+DeleteLineNumbers.sh
+LICENSE
+README.md
+input.txt
+mecab.sh
+result.txt
+
+#!/bin/bash
+
+#Usage 
+#sh mecab.sh DirectoryName
+DeleteLinNumbers(){
+    for file in $1/*.txt; do
+        fileName=${file##*/}
+        sed -e "s/^[0-9]*://" $file | sed -e "s/^\/\///" | sed  -e "s/^\/*//" |sed -e "s/\$\*\///g"|sed -e "s/\*//g"
+    done
+}
+# DeleteLinNumbers $1
+# DeleteLinNumbers $1 
+cat $1 | mecab | grep $'\t名詞'  | cut -f1 | sort | uniq -c | sort -nr
