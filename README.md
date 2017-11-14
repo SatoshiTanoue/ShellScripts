@@ -1,6 +1,6 @@
 # ShellScripts
 
-There are some ShellScripts
+There are some ShellScripts.
 
 
 # Usage
