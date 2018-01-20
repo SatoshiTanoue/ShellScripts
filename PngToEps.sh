@@ -1,6 +1,6 @@
 # convertコマンドを使用するために，ImageMagickをインストールする必要がある
 # brew install imagemagick
-# sh con.sh *.png 
+# sh PngToEps.sh *.png 
 #!/bin/sh
 
 for str in $@
